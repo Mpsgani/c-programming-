@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+int main() 
+{
+
+    int d,z,i,y,j,g,l,n,co;
+    scanf("%d", &n);
+    z=(n*2)-1;
+    l=n;
+    y=n;
+    for(i=z;i>0;i--){
+        d=n;
+        g=l;
+        co=0;
+        for(j=z;j>0;j--){
+            printf("%d ",d);
+            if(d>g){
+                if(j>y){
+                    d--;
+                    co++;
+                }
+            }
+			if(j-1<=co){
+            	d++;
+			}
+        }
+        printf("\n");
+        if(i>y){
+        	l--;
+		}
+		else{
+			l++;
+		}
+    }
+    return 0;
+}
